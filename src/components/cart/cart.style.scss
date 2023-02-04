@@ -1,0 +1,36 @@
+@import "../../response";
+
+.cart-container{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin: 8rem 0;
+    @include respond(phone){
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+}
+.cart{
+    display: flex;
+    gap: 2rem;
+    img{
+        height: 12rem;
+    }
+    .contant{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        font-size: 1.5rem;
+        &>:first-child{
+            color:var(--Grayish-blue);
+            font-size: 2.3rem;
+        }
+        &:hover{
+            &>:nth-child(2){
+                transition: color .3s ease-in-out;
+                    color:var(--Soft-red);
+            }
+        }
+
+    }
+}

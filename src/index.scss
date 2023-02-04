@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@font-face {
+    font-family: first-font;
+    src: url('assets/fonts/Inter-VariableFont_slnt\,wght.ttf');
+    weight:normal;
+}
+@import './response.scss';
+
+
+*,
+*::after,
+*::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: first-font,'Inter', sans-serif;
+}
+
+:root{
+--Soft-orange: hsl(35, 77%, 62%);
+--Soft-red: hsl(5, 85%, 63%);
+--Off-white: hsl(36, 100%, 99%);
+--Grayish-blue: hsl(233, 8%, 79%);
+--Dark-grayish-blue: hsl(236, 13%, 42%);
+--Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+body{
+    padding: 6rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    font-weight: 400;
+    color:var(--Dark-grayish-blue);
+    overflow-x: hidden;
+
+
+}
+
+
+@include respond(tab-port){
+    body{
+        padding:4rem 2rem;
+    }
+}
